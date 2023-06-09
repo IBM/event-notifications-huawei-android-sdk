@@ -1,0 +1,3 @@
+rootProject.name = "event-notifications-huawei-android-sdk"
+include ':app'
+include ':lib'
