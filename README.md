@@ -100,7 +100,7 @@ Configure the Module level `build.gradle` and Project level `build.gradle` files
    dependencies {
        ........
        implementation 'com.huawei.hms:push:6.9.0.300'
-       implementation 'com.ibm.cloud:eventnotifications-huawei-android:0.0.1'
+       implementation 'com.ibm.cloud:eventnotifications-huawei-android:1.0.1'
        .......
    }
    ```
