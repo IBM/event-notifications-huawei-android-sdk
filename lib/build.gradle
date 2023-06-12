@@ -16,8 +16,8 @@ android {
         minSdk 24
         targetSdk 33
         versionCode 1
-        versionName "0.0.1"
-        buildConfigField 'String', 'VERSION_NAME', "\"0.0.1\""
+        versionName "1.0.0"
+        buildConfigField 'String', 'VERSION_NAME', "\"1.0.0\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -25,7 +25,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -38,17 +38,8 @@ android {
     }
     packagingOptions {
         exclude("META-INF/LICENSE*")
-    }
-    publishing {
-        repositories {
-            maven {
-                url="https://oss.sonatype.org/content/repositories/snapshots/"
-                credentials {
-                    username = ""
-                    password = ""
-                }
-            }
-        }
+        exclude 'META-INF/rxkotlin.properties'
+        exclude 'META-INF/rxkotlin_main.kotlin_module'
     }
     lintOptions {
         abortOnError false

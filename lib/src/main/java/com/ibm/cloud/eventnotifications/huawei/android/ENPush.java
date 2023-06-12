@@ -171,10 +171,12 @@ public class ENPush {
         }
         deviceIdentity = new BaseDeviceIdentity(context);
         SharedPreferences sharedPreferences = appContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "instanceId", guid);
-        ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "destinationId", destinationID);
-        ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "apiKey", apikey);
-        ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "isInitialized", "true");
+        if(sharedPreferences != null){
+          ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "instanceId", guid);
+          ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "destinationId", destinationID);
+          ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "apiKey", apikey);
+          ENPushUtils.storeContentInSharedPreferences(sharedPreferences, "isInitialized", "true");
+        }
       } else {
         logger.error("ENPush:initialize() - An error occured while initializing ENPush service. Add a valid ClientSecret and Event Notifications service instance ID Value");
         throw new ENPushException("ENPush:initialize() - An error occured while initializing ENPush service. Add a valid ClientSecret and Event Notifications service instance ID Value", INITIALISATION_ERROR);
