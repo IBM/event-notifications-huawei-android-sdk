@@ -32,7 +32,7 @@ Service Name | Artifact Coordinates
 * An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys).
 
 ## Installation
-The current version of this SDK is: 0.0.1
+The current version of this SDK is: 1.0.1
 
 Each service's artifact coordinates are listed in the table above.
 
@@ -100,7 +100,7 @@ Configure the Module level `build.gradle` and Project level `build.gradle` files
    dependencies {
        ........
        implementation 'com.huawei.hms:push:6.9.0.300'
-       implementation 'com.ibm.cloud:eventnotifications-huawei-android:0.0.1'
+       implementation 'com.ibm.cloud:eventnotifications-huawei-android:1.0.1'
        .......
    }
    ```
