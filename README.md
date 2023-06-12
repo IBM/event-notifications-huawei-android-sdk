@@ -32,7 +32,7 @@ Service Name | Artifact Coordinates
 * An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys).
 
 ## Installation
-The current version of this SDK is: 0.0.1
+The current version of this SDK is: 1.0.1
 
 Each service's artifact coordinates are listed in the table above.
 
