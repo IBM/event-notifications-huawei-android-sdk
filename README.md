@@ -1,4 +1,4 @@
-# Android Huawei destination SDK for IBM Cloud Event Notifications service Version 0.0.1
+# Android Huawei destination SDK for IBM Cloud Event Notifications service Version 1.0.1
 Android destination client library to interact with various [IBM Cloud Event Notifications Service](https://cloud.ibm.com/apidocs?category=event-notifications).
 
 ## Table of Contents
@@ -21,7 +21,7 @@ The IBM Cloud Event Notifications Service Huawei Android destination SDK allows 
 
 Service Name | Artifact Coordinates
 --- | ---
-[Event Notifications Service](https://cloud.ibm.com/apidocs/event-notifications) | com.ibm.cloud:eventnotifications-huawei-android:0.0.1
+[Event Notifications Service](https://cloud.ibm.com/apidocs/event-notifications) | com.ibm.cloud:eventnotifications-huawei-android:1.0.1
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ To use the Event Notifications Huawei Android destination SDK, define a dependen
 
 ### Gradle
 ```gradle
-compile 'com.ibm.cloud:eventnotifications-huawei-android:0.0.1'
+compile 'com.ibm.cloud:eventnotifications-huawei-android:1.0.1'
 ```
 
 ## Using the SDK
