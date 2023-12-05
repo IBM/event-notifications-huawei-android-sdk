@@ -1,4 +1,4 @@
-# Android Huawei destination SDK for IBM Cloud Event Notifications service Version 1.0.1
+# Android Huawei destination SDK for IBM Cloud Event Notifications service Version 1.1.0
 Android destination client library to interact with various [IBM Cloud Event Notifications Service](https://cloud.ibm.com/apidocs?category=event-notifications).
 
 ## Table of Contents
@@ -21,7 +21,7 @@ The IBM Cloud Event Notifications Service Huawei Android destination SDK allows 
 
 Service Name | Artifact Coordinates
 --- | ---
-[Event Notifications Service](https://cloud.ibm.com/apidocs/event-notifications) | com.ibm.cloud:eventnotifications-huawei-android:1.0.1
+[Event Notifications Service](https://cloud.ibm.com/apidocs/event-notifications) | com.ibm.cloud:eventnotifications-huawei-android:1.1.0
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Service Name | Artifact Coordinates
 * An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys).
 
 ## Installation
-The current version of this SDK is: 1.0.1
+The current version of this SDK is: 1.1.0
 
 Each service's artifact coordinates are listed in the table above.
 
@@ -46,7 +46,7 @@ To use the Event Notifications Huawei Android destination SDK, define a dependen
 
 ### Gradle
 ```gradle
-compile 'com.ibm.cloud:eventnotifications-huawei-android:1.0.1'
+compile 'com.ibm.cloud:eventnotifications-huawei-android:1.1.0'
 ```
 
 ## Using the SDK
@@ -100,7 +100,7 @@ Configure the Module level `build.gradle` and Project level `build.gradle` files
    dependencies {
        ........
        implementation 'com.huawei.hms:push:6.9.0.300'
-       implementation 'com.ibm.cloud:eventnotifications-huawei-android:1.0.1'
+       implementation 'com.ibm.cloud:eventnotifications-huawei-android:1.1.0'
        .......
    }
    ```
@@ -159,6 +159,7 @@ enPush.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey);
 - `ENPush.REGION_UK`
 - `ENPush.REGION_SYDNEY`
 - `ENPush.REGION_FRANKFURT`
+- `ENPush.REGION_MADRID`
 
 
 ## Register for notifications
