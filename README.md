@@ -160,6 +160,11 @@ enPush.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey);
 - `ENPush.REGION_SYDNEY`
 - `ENPush.REGION_FRANKFURT`
 - `ENPush.REGION_MADRID`
+- `ENPush.REGION_BNPP`
+- `ENPush.REGION_OSAKA`
+- `ENPush.REGION_TOKYO`
+- `ENPush.REGION_TORONTO`
+- `ENPush.REGION_SAO_PAULO`
 
 
 ## Register for notifications
