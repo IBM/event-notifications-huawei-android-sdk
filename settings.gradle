@@ -1,2 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "com.vanniktech.maven.publish" version "0.29.0" apply false
+    id "com.android.library" version "8.8.0" apply false
+    id "com.android.application" version "8.8.0" apply false
+}
+
 rootProject.name = "event-notifications-huawei-android-sdk"
 include ':lib'
