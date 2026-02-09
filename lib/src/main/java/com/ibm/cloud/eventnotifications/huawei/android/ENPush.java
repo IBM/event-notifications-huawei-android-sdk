@@ -68,6 +68,7 @@ public class ENPush {
   public final static String REGION_SAO_PAULO = "br-sao";
   public final static String REGION_MONTREAL = "ca-mon";
   public final static String REGION_WASHINGTON_DC = "us-east";
+  public final static String REGION_CHENNAI = "in-che";
 
   public static final String PREFS_NAME = "com.ibm.cloud.eventnotifications.huawei.android";
   static final String PREFS_NOTIFICATION_MSG = "LatestNotificationMsg";
