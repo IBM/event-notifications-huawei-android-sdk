@@ -168,6 +168,7 @@ enPush.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey);
 - `ENPush.REGION_MONTREAL`
 - `ENPush.REGION_WASHINGTON_DC`
 - `ENPush.REGION_CHENNAI`
+- `ENPush.REGION_MUMBAI`
 
 ## Register for notifications
 
