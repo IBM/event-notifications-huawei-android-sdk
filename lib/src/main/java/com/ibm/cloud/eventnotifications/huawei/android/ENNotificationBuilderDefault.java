@@ -150,8 +150,13 @@ class ENNotificationBuilderDefault implements ENNotificationBuilderInterface {
 
         Intent deleteIntent = new Intent(ENPushUtils.getIntentPrefix(context)
                 + enMessageConstants.getStringForKey(CANCEL_IBM_PUSH_NOTIFICATION));
+        deleteIntent.setPackage(context.getPackageName());
         deleteIntent.putExtra(ENPushConstants.ID, message.getId());
-        PendingIntent deletePendingIntent = PendingIntent.getBroadcast(context, notificationId, deleteIntent, 0);
+        PendingIntent deletePendingIntent = PendingIntent.getBroadcast(
+                context,
+                notificationId,
+                deleteIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         if (message.getGcmStyle() != null && androidSDKVersion > 15) {
             NotificationManager notificationManager = (NotificationManager) context
@@ -241,7 +246,7 @@ class ENNotificationBuilderDefault implements ENNotificationBuilderInterface {
             if (androidSDKVersion > 10) {
                 builder.setContentIntent(PendingIntent
                         .getActivity(context, notificationId, intent,
-                                PendingIntent.FLAG_UPDATE_CURRENT))
+                                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE))
                         .setDeleteIntent(deletePendingIntent)
                         .setSmallIcon(icon).setTicker(alert).setWhen(when)
                         .setAutoCancel(true).setContentTitle(title)
@@ -274,7 +279,7 @@ class ENNotificationBuilderDefault implements ENNotificationBuilderInterface {
                     if (receivedVisibility == Notification.VISIBILITY_PRIVATE && message.getRedact() != null) {
                         builder.setContentIntent(PendingIntent
                                 .getActivity(context, notificationId, intent,
-                                        PendingIntent.FLAG_UPDATE_CURRENT))
+                                        PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE))
                                 .setSmallIcon(icon).setTicker(alert).setWhen(when)
                                 .setAutoCancel(true).setContentTitle(title)
                                 .setContentText(message.getRedact()).setSound(enResourceManager.getNotificationSoundUri(context, sound));
@@ -295,7 +300,7 @@ class ENNotificationBuilderDefault implements ENNotificationBuilderInterface {
 
             } else {
                 notification = builder.setContentIntent(PendingIntent
-                        .getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT))
+                        .getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE))
                         .setDeleteIntent(deletePendingIntent)
                         .setSmallIcon(icon).setTicker(alert).setWhen(when)
                         .setAutoCancel(true).setContentTitle(title)
